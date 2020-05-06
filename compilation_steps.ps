@@ -1,0 +1,3 @@
+julia --startup-file=no --trace-compile=app_precompile.jl CSV2Parquet.jl "fm.csv"
+julia --startup-file=no -J"C:\Users\RTX2080\AppData\Local\Programs\Julia\Julia-1.4.1\lib\julia\sys.dll" --output-o sys.dll create_sysimage.jl
+gcc -shared -o sys.dll -fPIC -Wl,--whole-archive sys.dll -Wl,--no-whole-archive -L"C:\Users\RTX2080\AppData\Local\Programs\Julia\Julia-1.4.1\lib\julia\" -ljulia
